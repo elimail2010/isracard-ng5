@@ -3,12 +3,16 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 VER 1.00
 ========
-This app also uploaded and hosted on amazon AWS - for online browse on this link :
+
+
+FOR LOCAL USAGE: 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+FOR ONLINE USAGE:
+This app also uploaded and hosted on amazon AWS - for online browsing    on this link :
+http://isracard-ng5-dev.us-west-2.elasticbeanstalk.com/
 
 
 
