@@ -6,22 +6,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+VER 1.00
+========
+This app also uploaded and hosted on amazon AWS - for online browse on this link :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+App Description :
+The user should type in searchbox the github repository term.
+The app will listen to typing and will start search action only if term's length  is between 3-10  ,and only when stop styping .
 
-## Running unit tests
+Speical technology used:
+using reactive forms , forms validations, observabels, rx/js,  services , css3 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+project structure:
+app.modules ->
+        isracard-service (calls the server app - asp.net webapi hosted on AWS)
+        app.component -> (shows all repos component in a css floating style as gallery)
+                repos.component (shows the git name, full name + avatar)
+        
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+button 'Bookmark', has not been applyed yet in this version (1.0)
+added bookemarked panel (extra feature) ,has not been applyed yet in this version(1.0).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+                (c) Elisha Levi 03/2018
