@@ -21,27 +21,27 @@ body {
 
 .basic-container {
  margin:2%;width:100%;
- 
+
 }
 
 .version-info {
   font-size: 8pt;
- 
+
 }
 
 
 .zoom {
- 
- 
+
+
   -webkit-animation: myanim 5s infinite; /* Chrome, Opera 15+, Safari 5+ */
   animation: myanim 5s infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
   transition: transform .2s; /* Animation */
-  
+
 }
 
 .zoom:hover {
 
- 
+
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
@@ -64,7 +64,7 @@ input.rounded:focus {
 
 
 .img-circle {
-	border-radius: 50%;
+	border-radius: 40%;
 	box-shadow: 2px 2px 3px #666;
 	padding:5px;
 }
@@ -72,4 +72,14 @@ input.rounded:focus {
 .error{
 	color: red;
 
-} 
+}
+
+
+
+.mat-card-subtitle:not(:first-child), .mat-card-title:not(:first-child)  { margin-top: -20px !important ;}
+.mat-card {padding: 20px;}
+
+
+*, *::before, *::after {
+   box-sizing:   content-box !important;
+}

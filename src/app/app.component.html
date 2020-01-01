@@ -4,24 +4,24 @@
    {{ title }}
   </h2>
   <img width="300" alt="Angular Logo" src="https://seeklogo.com/images/I/isracard-logo-DD76004B1C-seeklogo.com.gif">
-  <div  > search repository on github :    
+  <div  > search repository on github :
       <form class="" style ="display:inline-block" >
         <div class="form-group">
           <input type="search"
                  class=" rounded"
                  placeholder="Enter search string"
                  [formControl]="searchField">
-                
+
                  <small> <label *ngIf="searchField.invalid" [ngClass] = "'error'" > allowed  3-10 characters!</label>    </small>
                  <div>
-     
-                            
-                      
-                       </div> 
-              
+
+
+
+                       </div>
+
         </div>
 
-             
+
       </form>
 </div>
 <div>
@@ -30,23 +30,33 @@
     </div>
     <div *ngIf=" debugView " >
         debug mode: {{debugView}}
-    <div>*debug -> repo list </div>   
+    <div>*debug -> repo list </div>
     <div *ngFor='let item of repos ; let idx = index'>
-         <div>  {{item.name}}, {{item.full_name}}  </div>   
+         <div>  {{item.name}}, {{item.full_name}}  </div>
+         <div>
+
+           <p> created_at:{{item.created_at  | date:'medium'}} </p>
+           <p> updated_at:{{item.updated_at |date:'medium'}} </p>
+           <p> pushed_at:{{item.pushed_at  | date:'medium' }} </p>
+           <p> html_url: {{item.html_url | shortUrl }}</p>
+
+         </div>
      </div>
   </div>
-  
+
+</div>
+
   <div class="mat-app-background basic-container center">
-    
-      
+
+
   <div *ngFor='let item of repos ; let idx = index'>
       <app-repos  [repo]='item' style="float:left" class ="zoom"></app-repos>
    </div>
   </div>
-  
-  
+
+
  </div>
- 
+
 <router-outlet></router-outlet>
 
 <router-outlet></router-outlet>

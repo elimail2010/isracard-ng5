@@ -2,7 +2,7 @@ import { Component , Injectable, OnInit} from '@angular/core';
 import {IRepo} from './isracard-service.service'
 import { IsracardServiceService } from './isracard-service.service';
 
- 
+
 
 import {Observable} from 'rxjs/Observable'
 import 'rxjs/add/operator/catch';
@@ -16,7 +16,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/filter';
 
 import { FormControl, Validators } from '@angular/forms';
-@Component({ 
+@Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -24,7 +24,7 @@ import { FormControl, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
 
 
-  
+
   public loading: boolean = false;
   private results: Observable<any>;
   public repos: Observable<any>;
@@ -35,23 +35,23 @@ export class AppComponent implements OnInit {
   MyRepo : any ;
   debugView : Boolean;
 
-  
+
 
   constructor(private _isracardServiceService: IsracardServiceService){
-   
+
   }
   submitForm(value: any){
     console.log(value);
   }
   ngOnInit(){
     console.log('init');
-    
+
     this.debugView = false;
-    
+
 
 
     this.searchField = new FormControl( '', [Validators.required, Validators.maxLength(10),Validators.minLength(3)]);
-    
+
     this.results = this.searchField.valueChanges
       .filter(term => term)
       .filter (term => term.length >2)
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
 /*
     this._isracardServiceService.getRepos().subscribe(data => {
         console.log(data);
-        this.MyRepo = data; 
+        this.MyRepo = data;
         }, err => {
           console.log(err);
         }); */

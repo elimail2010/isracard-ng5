@@ -9,12 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReposComponent } from './repos/repos.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpInterceptor } from './http-interceptor.service';
-
+import { ShortUrlPipe} from './pipes/short-url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReposComponent
+    ReposComponent,
+    ShortUrlPipe
   ],
   imports: [
     BrowserModule,
